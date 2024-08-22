@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 // import Logo from "../Assets/CollegeLogo.jpeg";
 import { BsPersonCircle } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -47,12 +47,13 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
-        {/* <img src={Logo} alt="College Logo" /> */}
-      </div>
+        {/* <img src={Logo} alt="College Logo" /> *//*}
+
+    /*</div>
       <div className="navbar-links-container">
         <Link to="/">Home</Link>
-        {/* <a href="#home"></a> */}
-        <Link to="/courses">Courses</Link>
+        {/* <a href="#home"></a> *//*}
+        /*<Link to="/courses">Courses</Link>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
         <a href="#testimonials">Testimonials</a>
@@ -82,6 +83,31 @@ const Navbar = () => {
           <Divider />
         </Box>
       </Drawer>
+    </nav>
+  );
+};
+
+export default Navbar;*/
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">
+          <Link to="/">College Portal</Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/courses" className="nav-link">Courses</Link>
+          <Link to="/testimonials" className="nav-link">Testimonials</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+        </div>
+      </div>
     </nav>
   );
 };

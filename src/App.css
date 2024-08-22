@@ -237,3 +237,48 @@ th {
 .courses-table tr:hover {
   background-color: #f1f1f1;
 }
+/* App.css */
+
+/* Basic reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #007bff; /* Change to your desired color */
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  border-radius: 5px;
+}
