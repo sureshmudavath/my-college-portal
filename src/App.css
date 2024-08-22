@@ -1,38 +1,239 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar Styles */
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px 50px;
+  background-color: #004085;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo-container img {
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-links-container a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-profile-icon,
+.navbar-menu-container {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Home Section Styles */
+.home-banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+  background-color: #e9ecef;
+}
+
+.home-text-section {
+  max-width: 50%;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+  color: #004085;
+}
+
+.primary-text {
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.secondary-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004085;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home-image-section img {
+  max-width: 100%;
+}
+
+/* About Section Styles */
+.about-section-container {
+  display: flex;
+  padding: 100px 50px;
+}
+
+.about-section-image-container img {
+  max-width: 100%;
+}
+
+.about-section-text-container {
+  max-width: 50%;
+  margin-left: 50px;
+}
+
+.primary-subheading {
+  font-size: 1.5rem;
+  color: #004085;
+}
+
+.about-buttons-container .secondary-button {
+  margin-right: 20px;
+}
+
+.watch-video-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #004085;
+  border: 2px solid #004085;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Courses Section Styles */
+.courses-section-wrapper {
+  padding: 100px 50px;
+  background-color: #e9ecef;
+}
+
+.courses-section-top {
+  margin-bottom: 50px;
+}
+
+.courses-section-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.info-boxes-img-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.courses-section-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses-section-info h2 {
+  margin-top: 20px;
+  color: #004085;
+}
+
+/* Testimonial Section Styles */
+.work-section-wrapper {
+  padding: 100px 50px;
+}
+
+.testimonial-section-bottom {
+  margin-top: 50px;
+}
+
+.testimonials-stars-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+/* Contact Section Styles */
+.contact-page-wrapper {
+  padding: 100px 50px;
+  background-color: #e9ecef;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.primary-button {
+  padding: 15px 30px;
+  background-color: #004085;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-info {
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* Footer Styles */
+.footer-wrapper {
+  padding: 20px 50px;
+  background-color: #004085;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.courses-table th, .courses-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.courses-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.courses-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.courses-table tr:hover {
+  background-color: #f1f1f1;
 }
