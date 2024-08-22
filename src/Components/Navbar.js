@@ -98,7 +98,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <Link to="/">College Portal</Link>
+          <Link to="/">CollegePortal</Link>
         </div>
         <div className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
