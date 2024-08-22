@@ -282,3 +282,32 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   background-color: #0056b3; /* Darker shade for hover effect */
   border-radius: 5px;
 }
+
+/* App.css */
+
+/* Basic styling for the table */
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.students-table th, .students-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.students-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.students-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.students-table tr:hover {
+  background-color: #ddd;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../App.css'; // Assuming this is where your styles are
 
 function Students() {
   const [students, setStudents] = useState([]);
@@ -30,7 +31,7 @@ function Students() {
     <div>
       <h1>Students Page</h1>
       {students.length > 0 ? (
-        <table>
+        <table className="students-table">
           <thead>
             <tr>
               <th>ID</th>
