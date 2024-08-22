@@ -12,8 +12,11 @@ To populate your database with sample data, follow these instructions:
    cd bcg
 python manage.py shell
 
-//Insert student data
+### Adding Student Data
 
+To add sample student entries to your Django database, use the following code in the Django shell:
+
+```python
 from collage.models import Student  # Replace 'collage' with the name of your Django app
 from datetime import datetime
 
@@ -53,7 +56,11 @@ for student_data in students:
 
 print("Students added successfully!")
 
-//insert course data
+### Adding Course Data
+
+To add sample course entries to your Django database, use the following code in the Django shell:
+
+```python
 from collage.models import Course  # Replace 'collage' with the name of your Django app
 
 # Creating sample course entries
@@ -98,4 +105,3 @@ Course.objects.create(
 )
 
 print("Courses added successfully!")
-
