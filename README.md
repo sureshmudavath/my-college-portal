@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# College Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Adding Data
 
-## Available Scripts
+To populate your database with sample data, follow these instructions:
 
-In the project directory, you can run:
+### Student Data
 
-### `npm start`
+1. **Navigate to the project directory**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   cd bcg
+python manage.py shell
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+//Insert student data
 
-### `npm test`
+from collage.models import Student  # Replace 'collage' with the name of your Django app
+from datetime import datetime
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Create and save a new Student instance
+student1 = Student(
+    first_name='Alice',
+    last_name='Williams',
+    email='alice.williams@example.com',
+    enrollment_date=datetime.strptime('2024-08-15', '%Y-%m-%d')
+)
+student1.save()
 
-### `npm run build`
+# Create and save another Student instance
+student2 = Student(
+    first_name='Bob',
+    last_name='Brown',
+    email='bob.brown@example.com',
+    enrollment_date=datetime.strptime('2024-08-16', '%Y-%m-%d')
+)
+student2.save()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Create and save multiple students in a loop
+students = [
+    {'first_name': 'Charlie', 'last_name': 'Johnson', 'email': 'charlie.johnson@example.com', 'enrollment_date': '2024-08-17'},
+    {'first_name': 'Diana', 'last_name': 'White', 'email': 'diana.white@example.com', 'enrollment_date': '2024-08-18'},
+    {'first_name': 'Ethan', 'last_name': 'Harris', 'email': 'ethan.harris@example.com', 'enrollment_date': '2024-08-19'}
+]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+for student_data in students:
+    student = Student(
+        first_name=student_data['first_name'],
+        last_name=student_data['last_name'],
+        email=student_data['email'],
+        enrollment_date=datetime.strptime(student_data['enrollment_date'], '%Y-%m-%d')
+    )
+    student.save()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+print("Students added successfully!")
 
-### `npm run eject`
+//insert course data
+from collage.models import Course  # Replace 'collage' with the name of your Django app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Creating sample course entries
+Course.objects.create(
+    title='Introduction to Computer Science',
+    description='An introductory course to computer science principles and programming.',
+    professor_name='Dr. Alice Johnson',
+    price=150.00,
+    location='Building A, Room 101'
+)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Course.objects.create(
+    title='Data Structures and Algorithms',
+    description='A course focused on fundamental data structures and algorithms.',
+    professor_name='Prof. Bob Smith',
+    price=200.00,
+    location='Building B, Room 202'
+)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Course.objects.create(
+    title='Web Development Basics',
+    description='Learn the basics of web development including HTML, CSS, and JavaScript.',
+    professor_name='Ms. Carol Lee',
+    price=175.00,
+    location='Building C, Room 303'
+)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Course.objects.create(
+    title='Database Management Systems',
+    description='An in-depth look at database design and management using SQL.',
+    professor_name='Dr. David Brown',
+    price=220.00,
+    location='Building D, Room 404'
+)
 
-## Learn More
+Course.objects.create(
+    title='Machine Learning Fundamentals',
+    description='Introduction to machine learning concepts and techniques.',
+    professor_name='Dr. Emma White',
+    price=250.00,
+    location='Building E, Room 505'
+)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+print("Courses added successfully!")
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
