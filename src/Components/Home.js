@@ -54,29 +54,17 @@ const Home = () => {
         </p>
         <button className="secondary-button">Explore Now</button>
       </div>
-      <div className="home-image-section">
-        <img src={CollegeImage} alt="College" />
-      </div>
-
-      {/* Add sections for displaying dynamic data */}
+      <div className="home-buttons">
+         {/* Add sections for displaying dynamic data */}
       <div className="home-student-section">
-        <h2><Link to="/students">Our Students</Link></h2>
-
-        <ul>
-          {students.map((student) => (
-            <li key={student.id}>{student.first_name} {student.last_name}</li>
-          ))}
-        </ul>
+        <Link to="/students"><h2 className="main-button">Students</h2></Link>
       </div>
 
       <div className="home-course-section">
-        <h2><Link to="/courses">Available Courses</Link></h2>
-        <ul>
-          {courses.map((course) => (
-            <li key={course.id}>{course.name}</li>
-          ))}
-        </ul>
+        <Link to="/courses"><h2 className="main-button">Courses</h2></Link>
       </div>
+      </div>
+     
     </div>
   );
 };

@@ -27,6 +27,21 @@ function Students() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
+  // Define the list of names to hide
+  const hiddenNames = [
+    'John Doe',
+    'Alice Williams',
+    'Bob Brown',
+    'Charlie Johnson',
+    'Diana White',
+    'Ethan Harris'
+  ];
+
+  // Filter students to exclude those with names in hiddenNames
+  const filteredStudents = students.filter(student => 
+    !hiddenNames.includes(`${student.first_name} ${student.last_name}`)
+  );
+  
   return (
     <div>
       <h1>Students Page</h1>
