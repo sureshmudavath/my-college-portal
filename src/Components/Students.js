@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../App.css'; // Assuming this is where your styles are
+import '../App.css'; 
 
 function Students() {
   const [students, setStudents] = useState([]);
@@ -8,11 +8,11 @@ function Students() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Function to fetch students
+    
     const fetchStudents = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/students/');
-        setStudents(response.data); // Assuming the response contains an array of students
+        setStudents(response.data); 
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -20,14 +20,12 @@ function Students() {
       }
     };
 
-    // Call the function to fetch students
     fetchStudents();
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  // Define the list of names to hide
   const hiddenNames = [
     'John Doe',
     'Alice Williams',
@@ -37,7 +35,6 @@ function Students() {
     'Ethan Harris'
   ];
 
-  // Filter students to exclude those with names in hiddenNames
   const filteredStudents = students.filter(student => 
     !hiddenNames.includes(`${student.first_name} ${student.last_name}`)
   );

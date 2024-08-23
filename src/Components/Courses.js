@@ -7,26 +7,21 @@ function Courses() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Function to fetch courses
     const fetchCourses = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/courses');
-        setCourses(response.data); // Assuming the response contains an array of courses
+        setCourses(response.data); 
         setLoading(false);
       } catch (err) {
         setError(err.message);
         setLoading(false);
       }
     };
-
-    // Call the function to fetch courses
     fetchCourses();
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-
-  // Filter courses where title is not 'Unknown'
   const filteredCourses = courses.filter(course => course.title !== 'Unknown');
 
   return (

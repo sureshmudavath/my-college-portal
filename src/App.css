@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,7 +8,6 @@ body {
   text-align: center;
 }
 
-/* Navbar Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -35,7 +34,6 @@ nav {
   cursor: pointer;
 }
 
-/* Home Section Styles */
 .home-banner-container {
   display: flex;
   justify-content: space-between;
@@ -72,7 +70,6 @@ nav {
   max-width: 100%;
 }
 
-/* About Section Styles */
 .about-section-container {
   display: flex;
   padding: 100px 50px;
@@ -105,7 +102,7 @@ nav {
   font-weight: bold;
 }
 
-/* Courses Section Styles */
+
 .courses-section-wrapper {
   padding: 100px 50px;
   background-color: #e9ecef;
@@ -135,7 +132,6 @@ nav {
   color: #004085;
 }
 
-/* Testimonial Section Styles */
 .work-section-wrapper {
   padding: 100px 50px;
 }
@@ -151,7 +147,6 @@ nav {
   color: #ffd700;
 }
 
-/* Contact Section Styles */
 .contact-page-wrapper {
   padding: 100px 50px;
   background-color: #e9ecef;
@@ -181,7 +176,7 @@ nav {
   color: #495057;
 }
 
-/* Footer Styles */
+
 .footer-wrapper {
   padding: 20px 50px;
   background-color: #004085;
@@ -237,9 +232,7 @@ th {
 .courses-table tr:hover {
   background-color: #f1f1f1;
 }
-/* App.css */
 
-/* Basic reset */
 body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -249,9 +242,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
 .navbar {
-  background-color: #007bff; /* Change to your desired color */
+  background-color: #007bff; 
   padding: 1rem;
 }
 
@@ -279,13 +271,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
 }
 
 .nav-link:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3; 
   border-radius: 5px;
 }
 
-/* App.css */
-
-/* Basic styling for the table */
 .students-table {
   width: 100%;
   border-collapse: collapse;
@@ -312,28 +301,26 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   background-color: #ddd;
 }
 
-/* Style for each button */
+
 .main-button {
-  background-color: #28a745; /* Green background */
-  color: white; /* White text */
-  padding: 12px 20px; /* Vertical and horizontal padding */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  background-color: #28a745; 
+  color: white; 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.3s; 
   margin: 4px;
 }
 
-/* Hover effect */
 .main-button:hover {
-  background-color: #218838; /* Darker green */
-  transform: scale(1.05); /* Slightly enlarge button */
+  background-color: #218838; 
+  transform: scale(1.05); 
 }
 
-/* Focus effect for accessibility */
 .main-button:focus {
-  outline: 2px solid #c3e6cb; /* Light green outline */
-  outline-offset: 2px; /* Space between outline and button */
+  outline: 2px solid #c3e6cb; 
+  outline-offset: 2px; 
 }
 
